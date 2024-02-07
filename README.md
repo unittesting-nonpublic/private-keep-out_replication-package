@@ -18,6 +18,8 @@ and it contains two main part:
 2. [Method(s) and it's access modifier(s)](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/final_filter_invoked_methods.tsv.zip) being invoked in the test from the production code
    - This includes where it's being invoked (if it's using any test helper and if it's part of the getters and setters)
    - Number of times being invoked. (being GROUPED BY # of invocation)
+   
+The extra details of the type libraries used to invoked private methods are in this [TSV file](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/invoked_grouped_Private_only.tsv)
 
 To use the instrumentation:
 1. Record all the name methods CUT (this is done via using the [fetch-classes](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/tree/main/java-projects-setup/fetch-classes) framework.

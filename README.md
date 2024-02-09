@@ -40,7 +40,5 @@ Stats:
 - Environtment Variable: `MAVEN_HOME="PATH_TO_MVN"`
 - The output is two TSV files under the root of the __project__ folder:
      1. __project_name__\_all_method_visibility.tsv, and
-        - a TSV file that contains all the methods (under __MavenLauncher.SOURCE_TYPE.APP_SOURCE__) and it's access modifiers 
-     2. __project_name__\_method_visibility.tsv
-        - a TSV file that contains all the methods being invoked by the tests (__MavenLauncher.SOURCE_TYPE.TEST_SOURCE__) in the project
+        - a TSV file that contains all the methods (under __MavenLauncher.SOURCE_TYPE.APP_SOURCE__) and it's access modifiers
 

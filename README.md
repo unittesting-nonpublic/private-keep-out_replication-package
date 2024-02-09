@@ -30,8 +30,8 @@ To use the instrumentation:
 6. Finally, use the filtering [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/filter_methods.ipynb) that will analyze the test code statically to make (sanity check) confirmation that the methods invoked exist in the test code.
 
 Stats:
-Successful Java projects - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/java_projects.csv)
-Notebook Java study analysis - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/OpenSourceProjects.ipynb)
-Projects # of Access Modifiers gathered - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/cut_access_modifiers_type.csv)
+- Successful Java projects - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/java_projects.csv)
+- Notebook Java study analysis - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/OpenSourceProjects.ipynb)
+- Projects # of Access Modifiers gathered - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/cut_access_modifiers_type.csv)
 
 

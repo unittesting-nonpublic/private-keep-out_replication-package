@@ -16,7 +16,7 @@ The result of the Java open-source study is included in the [java-project-stats]
 and it contains two main parts:
 1. The production code [method(s)/field(s)/contructor(s) and it's access modifier(s)](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/reports-access-modifiers-type.zip) (different parameters and/or access modifiers are considered as different types)
 2. [Method(s) and it's access modifier(s)](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/final_filter_invoked_methods.tsv.zip) being invoked in the test from the production code
-   - This includes where it's being invoked (if it's using any test helper and if it's part of the getters and setters)
+   - This includes where it's being invoked (if it's using any test helper and if it's part of the setup and teardown methods)
    - Number of times being invoked. (being GROUPED BY # of invocation)
    
 The extra details of the type libraries used to invoke private methods are in this [TSV file](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/invoked_grouped_Private_only.tsv)

@@ -23,15 +23,24 @@ The extra details of the type libraries used to invoke private methods are in th
 
 To use the instrumentation:
 1. Record all the name methods CUT (this is done via using the [fetch-classes](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/tree/main/java-projects-setup/fetch-classes) framework.
-2. Execute the pom-modify [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-setup/pom-modify/modify-project.sh) command on the root of the target project to include the maven-surefire plugin so that when executing the test (`mvn test`), the JUnit Surefire Report will include the loggging statements.
-3. Finally, execute the test (from the root mvn folder that contains the parent form) with the [java agent listener](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/tree/main/java-projects-setup/javaagent-listener) that acts as a listener (`mvn test -javaagent:javaagent-1.0-SNAPSHOT-jar-with-dependencies.jar`) that includes the name of all the production code methods involved.
-4. The report of the JUnit Surefire report will include the statements from the executed test.
-5. To parse the log, use the JUnit-XML parser [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/get_invoked_methods.ipynb) and it'll then remove invocation from internal method/constructor calls of the method.
-6. Finally, use the filtering [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/filter_methods.ipynb) that will analyze the test code statically to make (sanity check) confirmation that the methods invoked exist in the test code.
+3. Execute the pom-modify [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-setup/pom-modify/modify-project.sh) command on the root of the target project to include the maven-surefire plugin so that when executing the test (`mvn test`), the JUnit Surefire Report will include the loggging statements.
+4. Finally, execute the test (from the root mvn folder that contains the parent form) with the [java agent listener](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/tree/main/java-projects-setup/javaagent-listener) that acts as a listener (`mvn test -javaagent:javaagent-1.0-SNAPSHOT-jar-with-dependencies.jar`) that includes the name of all the production code methods involved.
+5. The report of the JUnit Surefire report will include the statements from the executed test.
+6. To parse the log, use the JUnit-XML parser [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/get_invoked_methods.ipynb) and it'll then remove invocation from internal method/constructor calls of the method.
+7. Finally, use the filtering [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/filter_methods.ipynb) that will analyze the test code statically to make (sanity check) confirmation that the methods invoked exist in the test code.
 
 Stats:
 - Successful Java projects - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/java_projects.csv)
 - Notebook Java study analysis - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/OpenSourceProjects.ipynb)
 - Projects # of Access Modifiers gathered - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/cut_access_modifiers_type.csv)
 
+[Fetch-classes](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/tree/main/java-projects-setup/fetch-classes) setup:
+- Java 8
+- `-DabsPath="PATH_TO_ROOT_MVN_PROJECT" org.example.TestVisibilityChecker`
+- Environtment Variable: `MAVEN_HOME="PATH_TO_MVN"`
+- The output is two TSV files under the root of the __project__ folder:
+     1. __project_name__\_all_method_visibility.tsv, and
+        - a TSV file that contains all the methods (under __MavenLauncher.SOURCE_TYPE.APP_SOURCE__) and it's access modifiers 
+     2. __project_name__\_method_visibility.tsv
+        - a TSV file that contains all the methods being invoked by the tests (__MavenLauncher.SOURCE_TYPE.TEST_SOURCE__) in the project
 

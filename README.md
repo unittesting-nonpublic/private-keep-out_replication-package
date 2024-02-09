@@ -31,6 +31,7 @@ To use the instrumentation:
 
 Stats:
 Successful Java projects - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/java_projects.csv)
-
+Notebook Java study analysis - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/OpenSourceProjects.ipynb)
+Projects # of Access Modifiers gathered - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/cut_access_modifiers_type.csv)
 
 

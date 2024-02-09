@@ -29,4 +29,8 @@ To use the instrumentation:
 5. To parse the log, use the JUnit-XML parser [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/get_invoked_methods.ipynb) and it'll then remove invocation from internal method/constructor calls of the method.
 6. Finally, use the filtering [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/filter_methods.ipynb) that will analyze the test code statically to make (sanity check) confirmation that the methods invoked exist in the test code.
 
+Stats:
+Successful Java projects - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/java_projects.csv)
+
+
 

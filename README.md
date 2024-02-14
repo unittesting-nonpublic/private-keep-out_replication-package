@@ -22,7 +22,7 @@ and it contains two main parts:
 The extra details of the type libraries used to invoke private methods are in this [TSV file](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/invoked_grouped_Private_only.tsv)
 
 To use the instrumentation:
-1. Record all the name methods CUT (this is done via using the [fetch-classes](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/tree/main/java-projects-setup/fetch-classes) framework.
+1. Record all the name methods CUT (this is done via using the [fetch-classes](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/tree/main/java-projects-setup/fetch-classes) framework).
 3. Execute the pom-modify [script](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-setup/pom-modify/modify-project.sh) command on the root of the target project to include the maven-surefire plugin so that when executing the test (`mvn test`), the JUnit Surefire Report will include the loggging statements.
 4. Finally, execute the test (from the root mvn folder that contains the parent form) with the [java agent listener](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/tree/main/java-projects-setup/javaagent-listener) that acts as a listener (`mvn test -javaagent:javaagent-1.0-SNAPSHOT-jar-with-dependencies.jar`) that includes the name of all the production code methods involved.
 5. The report of the JUnit Surefire report will include the statements from the executed test.
@@ -32,7 +32,7 @@ To use the instrumentation:
 Stats:
 - Successful Java projects - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/java_projects.csv)
 - Notebook Java study analysis - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/OpenSourceProjects.ipynb)
-- Projects # of Access Modifiers gathered - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/cut_access_modifiers_type.csv)
+- Projects # of Access Modifiers gathered - [Link](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/blob/main/java-projects-stats/cut_access_modifiers_type.csv) (**THIS IS ONLY FOR METHODS FROM THE PROJECTS, IT DOES NOT INCLUDE OTHER TYPES, e.g. CONSTRUCTORS, FIELDS, ETC.**)
 
 [Fetch-classes](https://github.com/unittesting-nonpublic/private-keep-out_replication-package/tree/main/java-projects-setup/fetch-classes) setup:
 - Java 8
